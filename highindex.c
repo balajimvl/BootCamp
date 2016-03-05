@@ -1,7 +1,7 @@
 #include<stdio.h>
 int check(int a[],int n,int s)
 {
-	int i,k=1;
+	int i,k=-1;
 	for(i=0;i<s;i++)
 	{
 		if(a[i]>n)
@@ -10,9 +10,9 @@ int check(int a[],int n,int s)
 			break;
 		}
 	}
-	if(k==1)
+	if(k==-1)
 	 {
-		  printf("-1 Not found");
+		  return k;
 	 }
 	
 	return k;
