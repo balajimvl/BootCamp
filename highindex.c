@@ -6,15 +6,21 @@ int check(int a[],int n,int s)
 	{
 		if(a[i]>n)
 		{
-			k=i;
-			break;
+			if(a[i]<a[i+1])
+			{
+				k=i;
+				break;
+			}
+			else if(a[i]==a[i+1])
+			{
+				k=i+1;
+			}
 		}
 	}
 	if(k==-1)
-	 {
-		  return k;
-	 }
-	
+	{
+		return k;
+	}
 	return k;
 }
 
